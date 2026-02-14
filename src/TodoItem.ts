@@ -26,7 +26,7 @@ export class TodoItem implements ITodoItem {
   }
 
   toString(): string {
-    const status = this.completed ? '✓' : ' ';
+    const status = this.completed ? '✅' : ' ';
     const desc = this.description ? ` - ${this.description}` : '';
     return `[${status}] ${this.id}. ${this.title}${desc}`;
   }

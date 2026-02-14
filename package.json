@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Sevan-Dev/Evaluation_TMA#readme",
   "directories": {
     "test": "test"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3"
   }
 }

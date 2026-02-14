@@ -13,13 +13,7 @@ export class TodoList {
 
   getAllTodos(): TodoItem[] {
     return this.todos;
-  }
-
-
-  getCompletedTodos(): TodoItem[] {
-    return this.todos.filter(todo => todo.completed);
-  }
-
+}
 
 
   findTodoById(id: number): TodoItem | undefined {
@@ -37,15 +31,6 @@ export class TodoList {
   }
 
 
-  deleteTodo(id: number): boolean {
-    const index = this.todos.findIndex(todo => todo.id === id);
-    if (index !== -1) {
-      this.todos.splice(index, 1);
-      return true;
-    }
-    return false;
-  }
-
   display(): void {
     if (this.todos.length === 0) {
       console.log('Aucune tâche dans la liste.');
@@ -58,10 +43,4 @@ export class TodoList {
     });
   }
 
-  getStats(): { total: number; completed: number } {
-    return {
-      total: this.todos.length,
-      completed: this.getCompletedTodos().length,
-    };
-  }
 }
