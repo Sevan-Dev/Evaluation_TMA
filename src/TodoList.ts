@@ -41,6 +41,17 @@ export class TodoList {
     this.todos.forEach(todo => {
       console.log(todo.toString());
     });
+    
   }
 
-}
+    displayCompleted(): void {
+    const completedTodos = this.todos.filter(todo => todo.completed);
+    if (completedTodos.length === 0) {
+      console.log('Aucune tâche terminée.');
+      return;
+    } 
+    console.log('\nTâches terminées:');
+    completedTodos.forEach(todo => {
+      console.log(todo.toString());
+    });
+}}
